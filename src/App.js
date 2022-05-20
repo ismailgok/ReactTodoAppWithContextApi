@@ -1,11 +1,11 @@
-import { useEffect, useState,useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { TodoContext } from "./components/context/TodoContext";
 import TodoList from "./components/TodoList";
 
 const App = () => {
     const { todos, setTodos } = TodoContext();
     const [todo, setTodo] = useState("");
-    const ref = useRef(null)
+    const ref = useRef(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,19 +17,21 @@ const App = () => {
             },
             ...prevState,
         ]);
-
-        
     };
 
     useEffect(() => {
         setTodo("");
-        ref.current.focus()
+        ref.current.focus();
     }, [todos]);
 
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input value={todo} ref={ref} onChange={(e) => setTodo(e.target.value)} />
+                <input
+                    value={todo}
+                    ref={ref}
+                    onChange={(e) => setTodo(e.target.value)}
+                />
                 <button className="ekle">Ekle</button>
             </form>
             <br />
