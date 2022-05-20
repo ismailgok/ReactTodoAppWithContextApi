@@ -18,7 +18,6 @@ const Todo = ({ todo }) => {
     };
 
     const saveEdit = (todoId) => {
-
         // 1.
         // const index = todos.findIndex((item) => item.id === todoId);
         // console.log(index, todos[index]);
@@ -46,6 +45,7 @@ const Todo = ({ todo }) => {
         setEditable(false);
         console.log(todos);
     };
+
     return (
         <div>
             <div>
