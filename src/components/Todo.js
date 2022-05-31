@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { TodoContext } from "./context/TodoContext";
-// import Edit from "./Edit";
 
 const Todo = ({ todo }) => {
     const { setTodos, todos } = TodoContext();
