@@ -7,6 +7,7 @@ const App = () => {
     const [todo, setTodo] = useState("");
     const ref = useRef(null);
 
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!todo) return;
